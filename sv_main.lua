@@ -1,7 +1,7 @@
 Keys = {}
 
 Default = {}
-Default.ToggleLock = GetConvarInt("aCarLock_ToggleLock", 172) -- Default is caps lock // special ability
+Default.ToggleLock = GetConvarInt("aCarLock_ToggleLock", 171) -- Default is caps lock // special ability
 
 RegisterServerEvent("aCarLock:RetrieveConvars")
 AddEventHandler("aCarLock:RetrieveConvars", function()
