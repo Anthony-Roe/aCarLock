@@ -47,5 +47,5 @@ AddEventHandler("aCarLock:RemoveKey", function(playerId, plate)
             table.remove(Keys[plate], i)
         end
     end
-    TriggerClientEvent("aCarLock:AddKey", playerId) -- This is in place for those who want notifications.
+    TriggerClientEvent("aCarLock:RemoveKey", playerId) -- This is in place for those who want notifications.
 end)

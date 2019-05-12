@@ -30,13 +30,6 @@ Citizen.CreateThread(function()
         if (IsControlJustPressed(0, Controls.ToggleLock)) then
             TryLocking()
         end
-        if (IsControlJustPressed(0, 38)) then
-            print(GetPlayerServerId(PlayerId()))
-            TriggerServerEvent("aCarLock:AddKey", GetPlayerServerId(PlayerId()), GetVehicleNumberPlateText(GetVehiclePedIsIn(PlayerPed)))
-        end
-        if (IsControlJustPressed(0, 170)) then
-            TriggerServerEvent("aCarLock:RemoveKey", GetPlayerServerId(PlayerId()), GetVehicleNumberPlateText(GetVehiclePedIsIn(PlayerPed)))
-        end
         Citizen.Wait(0)
     end
 end)
