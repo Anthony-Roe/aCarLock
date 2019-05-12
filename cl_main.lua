@@ -13,7 +13,6 @@ end)
 
 RegisterNetEvent("aCarLock:ToggleLock")
 AddEventHandler("aCarLock:ToggleLock", function(vehicle, lockState)
-    print(lockState)
     SetVehicleDoorsLockedForAllPlayers(vehicle, lockState)
 end)
 

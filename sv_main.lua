@@ -28,7 +28,6 @@ AddEventHandler("aCarLock:AddKey", function(playerId, plate)
     if (Keys[plate] == nil) then
         Keys[plate] = {}
     end
-    print(GetFiveMLicense(playerId))
     table.insert(Keys[plate], GetFiveMLicense(playerId))
     TriggerClientEvent("aCarLock:AddKey", playerId) -- This is in place for those who want notifications.
 end)
@@ -41,7 +40,6 @@ AddEventHandler("aCarLock:RemoveKey", function(playerId, plate)
     if (#Keys[plate] <= 0) then
         return
     end
-    print(GetFiveMLicense(playerId))
     for i=1, #Keys[plate], 1 do
         if (Keys[plate][i] == GetFiveMLicense(playerId)) then
             table.remove(Keys[plate], i)
